@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chat_navigation"
+    app:startDestination="@id/chat_navigation">
+
+    <fragment
+        android:id="@+id/chat_navigation"
+        android:name="com.example.tryengapp.views.fragments.CommunicationFragment"
+        android:label="CommunicationFragment"
+        tools:layout="@layout/fragment_communication">
+        <argument
+            android:name="userId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_chat_navigation_to_messagesFragment4"
+            app:destination="@id/messagesFragment4" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/messagesFragment4"
+        android:name="com.example.tryengapp.views.fragments.MessagesFragment"
+        android:label="MessagesFragment"
+        tools:layout="@layout/fragment_messages">
+        <argument
+            android:name="userId"
+            app:argType="string"/>
+    </fragment>
+
+
+</navigation>

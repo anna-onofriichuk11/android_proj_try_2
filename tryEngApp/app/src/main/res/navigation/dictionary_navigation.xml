@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dictionary_navigation"
+    app:startDestination="@id/dictionary_navigation">
+
+    <fragment
+        android:id="@+id/dictionary_navigation"
+        android:name="com.example.tryengapp.views.fragments.DictionaryPacksFragment"
+        android:label="DictionaryPacksFragment"
+        tools:layout="@layout/edit_dictlist_fragm">
+        <action
+            android:id="@+id/action_pack_to_dictionary"
+            app:destination="@id/dictionaryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editDictionaryPackFragment"
+        android:name="com.example.tryengapp.views.fragments.EditDictionaryPackFragment"
+        android:label="EditDictionaryPackFragment"
+        tools:layout="@layout/edit_dictlist_fragm">
+        <argument
+            android:name="packName"
+            app:argType="string" />
+        <argument
+            android:name="packIcon"
+            app:argType="string" />
+        <argument
+            android:name="packIndex"
+            app:argType="integer"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/dictionaryFragment"
+        android:name="com.example.tryengapp.views.fragments.DictionaryFragment"
+        android:label="DictionaryFragment"
+        tools:layout="@layout/edit_dictlist_fragm">
+        <action
+            android:id="@+id/action_dictionary_to_edit_pack"
+            app:destination="@id/editDictionaryPackFragment" />
+        <argument
+            android:name="packIndex"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+
+</navigation>
