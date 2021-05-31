@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_base_icon" />
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@id/avatar"
+        android:text="@string/username"
+        android:textSize="18sp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/icon_online"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_below="@id/username"
+        android:layout_marginStart="-15dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/avatar"
+        android:src="@color/colorOnline"
+        android:visibility="gone" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/icon_offline"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_below="@id/username"
+        android:layout_marginStart="-15dp"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/avatar"
+        android:visibility="gone"
+        android:src="@color/colorOffline" />
+
+</RelativeLayout>

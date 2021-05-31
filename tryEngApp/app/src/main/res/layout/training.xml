@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_training">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        style="@style/ToolbarTheme"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/color_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_arrow_back_white" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView"
+        style="@style/YourCardView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:strokeWidth="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/training_icon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="24dp"
+                android:contentDescription="@string/task_icon"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_translation_word"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/trainingDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="@string/translate_forward_title"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/training_icon" />
+
+            <TextView
+                android:id="@+id/trainingWord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:maxLines="2"
+                android:text="@string/profession"
+                android:textColor="@android:color/black"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/guideline"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/trainingDescription" />
+
+            <ImageView
+                android:id="@+id/imgSound"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:contentDescription="@string/sound"
+                android:src="@drawable/ic_sound"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/guideline"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/trainingDescription" />
+
+            <ImageButton
+                android:id="@+id/btnNext"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/circle"
+                android:contentDescription="@string/next"
+                android:src="@drawable/ic_next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerTraining"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+            <TextView
+                android:id="@+id/divider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/slash"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/btnNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnNext" />
+
+            <TextView
+                android:id="@+id/currentPage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:text="@string/current_page_number_text"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/divider"
+                app:layout_constraintEnd_toStartOf="@id/divider"
+                app:layout_constraintTop_toTopOf="@id/divider"
+                tools:layout_editor_absoluteY="577dp" />
+
+            <TextView
+                android:id="@+id/allPages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/all_pages_text"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/divider"
+                app:layout_constraintStart_toEndOf="@id/divider"
+                app:layout_constraintTop_toTopOf="@id/divider"
+                tools:layout_editor_absoluteY="577dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_primary">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        android:textColor="@color/color_accent"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:contentDescription="@string/icon"
+        android:src="@drawable/ic_login"
+        app:layout_constraintBottom_toTopOf="@+id/inputLayoutPhone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <com.nowiwr01.languator.views.auth.custom.CustomTextInputLayout
+        android:id="@+id/inputLayoutPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="44dp"
+        android:orientation="horizontal"
+
+        android:textColorHint="@color/grey2"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline1"
+        app:mainHintTextSize="@dimen/text_size_20sp">
+
+        <com.nowiwr01.languator.views.auth.custom.FixedTextInputEditText
+            android:id="@+id/editPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_phone_number"
+            android:imeOptions="actionDone"
+            android:inputType="phone"
+            android:maxLength="13"
+            android:textColor="@color/color_accent"
+            android:textColorHint="@color/color_primary"
+            android:textStyle="bold" />
+
+    </com.nowiwr01.languator.views.auth.custom.CustomTextInputLayout>
+
+    <ImageView
+        android:id="@+id/imageClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/icon"
+        android:padding="4dp"
+        android:src="@drawable/ic_close"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/inputLayoutPhone"
+        app:layout_constraintEnd_toEndOf="@+id/inputLayoutPhone" />
+
+    <Button
+        android:id="@+id/buttonNext"
+        style="@style/AppTheme.YellowButtonBig"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:padding="16dp"
+        android:text="@string/Next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

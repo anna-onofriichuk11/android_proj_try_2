@@ -1,0 +1,104 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:statusBarColor">@color/color_primary_dark</item>
+
+        <item name="android:textColorSecondary">@color/color_accent</item>
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryVariant">@color/color_primary_dark</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorSecondary">@color/color_accent</item>
+        <item name="colorSecondaryVariant">@color/color_accent_dark</item>
+        <item name="colorOnSecondary">@android:color/white</item>
+        <item name="colorError">#F44336</item>
+        <item name="colorOnError">#FFFFFF</item>
+        <item name="colorSurface">@color/color_surface</item>
+        <item name="colorOnSurface">@color/color_on_surface</item>
+
+        <item name="snackbarStyle">@style/CustomSnackbar</item>
+    </style>
+
+    <style name="BottombarIcon">
+        <item name="android:layout_width">56dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:padding">16dp</item>
+        <item name="android:tint">@color/tint_color</item>
+        <item name="android:background">@drawable/ripple</item>
+    </style>
+
+    <style name="ArticleBarsTheme" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar">
+        <item name="colorPrimary">@color/color_article_bar</item>
+        <item name="colorOnPrimary">@color/color_on_article_bar</item>
+        <item name="colorSurface">@color/color_article_bar</item>
+        <item name="colorControlNormal">@color/color_on_article_bar</item>
+        <item name="android:textColorHint">@color/color_gray</item>
+        <item name="android:textColorPrimary">?attr/colorOnPrimary</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="CustomSnackbar" parent="Widget.MaterialComponents.Snackbar">
+        <item name="layout_insetEdge">bottom</item>
+    </style>
+
+    <style name="AppTheme.YellowButtonBig" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textSize">@dimen/text_size_20sp</item>
+        <item name="android:textColor">@color/color_accent</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:backgroundTint">@color/selector_colored_button</item>
+    </style>
+
+    <style name="AppTheme.YellowButtonMedium" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:padding">8dp</item>
+        <item name="android:textSize">@dimen/text_size_16sp</item>
+        <item name="android:textColor">@color/color_accent</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:backgroundTint">@color/selector_colored_button</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="AppTheme.AccentButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:padding">8dp</item>
+        <item name="android:textSize">@dimen/text_size_16sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:backgroundTint">@color/color_accent</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="BodyXlReg1624">
+        <item name="android:textColor">@color/color_primary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:lineSpacingExtra">8sp</item>
+    </style>
+
+    <style name="DialogStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <style name="YourCardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@android:color/white</item>
+    </style>
+
+    <style name="ToolbarTheme"
+        parent="Widget.AppCompat.Toolbar">
+        <item name="popupTheme">@style/AppTheme.PopupOverlay</item>
+        <item name="titleTextColor">@android:color/white</item>
+        <item name="actionButtonStyle">@style/Widget.AppCompat.ActionButton</item>
+        <item name="selectableItemBackground">?android:selectableItemBackground</item>
+        <item name="selectableItemBackgroundBorderless">?android:selectableItemBackground</item>
+    </style>
+
+</resources>

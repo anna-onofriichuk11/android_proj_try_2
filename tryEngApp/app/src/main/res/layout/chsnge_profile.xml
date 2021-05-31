@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <View
+        android:id="@+id/imageTake"
+        android:layout_width="32dp"
+        android:layout_height="4dp"
+        android:background="@drawable/background_take"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title_change_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/title_change_image"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageTake" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50121653" />
+
+    <ImageView
+        android:id="@+id/defaultAvatar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/new_default_avatar"
+        android:src="@drawable/ic_kitty_superhero"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_change_image" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/chosenByUser"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/uploaded_avatar_by_user"
+        android:src="@drawable/ic_add_avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/title_change_image" />
+
+    <TextView
+        android:id="@+id/text_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/random_avatar"
+        android:textColor="@color/color_primary"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/defaultAvatar"
+        app:layout_constraintStart_toStartOf="@+id/defaultAvatar"
+        app:layout_constraintTop_toBottomOf="@id/defaultAvatar" />
+
+    <ImageButton
+        android:id="@+id/saveDefault"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_ok"
+        android:contentDescription="@string/accept_new_default_avatar"
+        app:layout_constraintEnd_toEndOf="@+id/text_default"
+        app:layout_constraintStart_toStartOf="@+id/text_default"
+        app:layout_constraintTop_toBottomOf="@+id/text_default" />
+
+    <ImageButton
+        android:id="@+id/saveUploaded"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/ic_ok"
+        android:contentDescription="@string/accept_new_user_avatar"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/your_own_picture"
+        android:textColor="@color/color_primary"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/chosenByUser"
+        app:layout_constraintStart_toStartOf="@+id/chosenByUser"
+        app:layout_constraintTop_toBottomOf="@id/defaultAvatar" />
+
+    <TextView
+        android:id="@+id/title_change_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/new_username_title"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/saveDefault" />
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/editName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:hint="@string/new_user_name"
+        android:maxLength="20"
+        app:layout_constraintEnd_toStartOf="@+id/saveUserName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_change_name"
+        app:met_hideUnderline="true"
+        app:met_maxCharacters="20" />
+
+    <Button
+        android:id="@+id/saveUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="@id/editName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/editName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
