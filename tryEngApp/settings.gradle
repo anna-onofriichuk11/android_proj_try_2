@@ -1,0 +1,2 @@
+rootProject.name = "tryEngApp"
+include ':app'
