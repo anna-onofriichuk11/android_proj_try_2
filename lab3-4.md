@@ -50,3 +50,7 @@ Word translation page:
 ![engapp](./images/word_translation.png)
 
 ![engapp](./images/word_translation_exit.png)
+
+Favourite words:
+
+![engapp](./images/favwords.png)
