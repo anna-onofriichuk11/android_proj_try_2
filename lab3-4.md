@@ -20,33 +20,33 @@ UI (lab 3-4):
 ### Screenshots:
 
 Screens in editor:
-![engapp](./image/add.png)
-![engapp](./image/avatar.png)
-![engapp](./image/background.png)
-![engapp](./image/bottom_nav_menu.png)
-![engapp](./image/change_profile_info.png)
-![engapp](./image/dictionate_fragment)
-![engapp](./image/exit_fragment)
-![engapp](./image/favouritewords_fragment.png)
+![engapp](./images/add.png)
+![engapp](./images/avatar.png)
+![engapp](./images/background.png)
+![engapp](./images/bottom_nav_menu.png)
+![engapp](./images/change_profile_info.png)
+![engapp](./images/dictionate_fragment)
+![engapp](./images/exit_fragment)
+![engapp](./images/favouritewords_fragment.png)
 
 Nav graph:
 
-![engapp](./image/home_nav.png)
+![engapp](./images/home_nav.png)
 
-![engapp](./image/dict_navigation.png)
+![engapp](./images/dict_navigation.png)
 
 
 ### Working ui:
 
 Listening page:
 
-![engapp](./image/listening.png)
+![engapp](./images/listening.png)
 
 
-![engapp](./image/listening_exit.png)
+![engapp](./images/listening_exit.png)
 
 Word translation page:
 
-![engapp](./image/word_translation.png)
+![engapp](./images/word_translation.png)
 
-![engapp](./image/word_translation_exit.png)
+![engapp](./images/word_translation_exit.png)
